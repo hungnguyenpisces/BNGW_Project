@@ -1,0 +1,18 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h3 {
+    color: magenta;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+figure {
+    text-decoration: underline;
+    color: white;
+}
+
+p {
+    font-weight: normal;
+}
