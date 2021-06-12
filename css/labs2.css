@@ -1,5 +1,5 @@
 body {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 h3 {
@@ -8,15 +8,11 @@ h3 {
     font-style: italic;
 }
 
-figure {
-    text-decoration: underline;
-    color: white;
-}
-
 hr {
     border-bottom: 1px solid magenta;
 }
 
 p {
     font-weight: normal;
+    text
 }
