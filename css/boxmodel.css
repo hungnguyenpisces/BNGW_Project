@@ -1,0 +1,24 @@
+div {
+  width: 500px;
+  height: 400px;
+  float: left; /*thuộc tính dồn khối: left, right, none*/
+  border: 1px solid magenta; /*bottom, top, right, left*/
+  margin: 10px; /*thuộc tính tách khối (khoảng cách ngoài viền): top, right, bottom, left, nếu <0 sẽ đè lên box khác*/
+  padding: 10px; /*thuộc tính tách nội dung bên trong khối (khoảng cách trong viền) giống margin */
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#box-img {
+  box-shadow: 0 0 10px magenta; /* đổ bóng cho khối tính ngoài viền*/
+}
+.box-n {
+  box-shadow: 0 0 10px red; /*2 thâm số tọa độ 2D x,y biên độ nhòe, color */
+  border-radius: 10px; /*thuộc tính bo tròn góc*/
+  opacity: 0.5;
+}
+.box-n:hover { /*hover là trạng tháng đưa chuột vào đối tượng*/
+  opacity: 1;
+  
+}
