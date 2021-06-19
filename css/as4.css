@@ -14,7 +14,7 @@ body {
   float: left;
   width: 100%;
   background-color: #ffffff;
-  box-shadow: 50px 50px 300px #0e0e0e;
+  box-shadow: 50px 50px 300px rgba(0, 0, 0, 0.25);
 }
 .container {
   padding: 20px 100px;
@@ -136,6 +136,7 @@ body {
   font-size: 12px;
 }
 .bottomlinks {
+  text-decoration: none;
   margin-left: 30%;
 }
 .bottomlinks ul{
@@ -145,6 +146,7 @@ body {
   float: left;
   list-style: none;
   margin-left: 20px;
+  display: inline-block;
 }
 .bottomlinks .fab {
   color: #000000;

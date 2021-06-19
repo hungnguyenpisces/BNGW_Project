@@ -17,7 +17,7 @@ p {
   text-align: center;
 }
 .header {
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   width: 1000px;
   height: 80px;
   margin: 20px;
@@ -32,7 +32,7 @@ p {
   margin: 20px;
 }
 .product {
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
   width: 200px;
   height: 400px;
