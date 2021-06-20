@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+    background-color: burlywood;
+    min-height: 1000px;
+}
+.box {
+  background: #ccc;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 50px;
+}
+.child {
+  width: 100px;
+  height: 100px;
+  background-color: violet;
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+p {
+  position: relative;
+  top: 0;
+}
+@keyframes circle

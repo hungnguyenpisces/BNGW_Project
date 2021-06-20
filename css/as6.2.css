@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #14182a !important;
+  font-family: "Josefin Sans" !important;
+}
+.header {
+  min-height: 80px;
+  background-color: #1b2039;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  line-height: 80px;
+  z-index: 1;
+}
+.header .logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+.header .trend-songs {
+  float: right;
+  text-decoration: none;
+  color: #2cc8e5;
+  font-size: 16px;
+}
+.header .trend-songs-title {
+  float: left;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 500px;
+  text-overflow: ellipsis;
+}
+.main {
+  margin-top: 150px;
+}
+.recent-played-heading {
+  margin-bottom: 25px;
+  color: #2cc8e5;
+}
+.featured-albums-heading {
+  margin-bottom: 25px;
+  color: #2cc8e5;
+}
+.trending-songs-heading {
+  margin-bottom: 25px;
+  color: #2cc8e5;
+}
+.item {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-bottom: 25px;
+}
+.item img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.item img:hover {
+  opacity: 0.75;
+}
+.item a {
+  line-height: 50px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+.item a:hover {
+  opacity: 0.75;
+  text-decoration: none;
+}
+.allbum-list {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 50px;
+}
+.trending-songs {
+  padding: 50px 200px;
+  color: #fff;
+  text-align: center;
+  margin: 50px;
+}
+.trending-songs h4 {
+  font-style: italic;
+}
+.footer {
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+.footer p {
+  color: #fff;
+  font-size: 16px;
+}
+.footer h3 {
+  color: #2cc8e5;
+}
+.footer img {
+  padding: 5px;
+}
