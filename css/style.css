@@ -84,6 +84,7 @@ body {
   display: inline-block;
   overflow: hidden;
   background: #f9f9f9;
+  border: 1px solid #7C41CB;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -webkit-border-radius: 10px;
