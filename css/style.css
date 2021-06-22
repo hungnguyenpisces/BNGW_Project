@@ -1,3 +1,95 @@
-a {
-    display: block;
+/* *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  margin-top: 50px;
+}
+.thumbnail iframe {
+  width: 1440px;
+  height: 900px;
+}
+.thumbnail-container {
+  width: calc(1440px * 0.25);
+  height: calc(900px * 0.25);
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+.thumbnail {
+  position: relative;
+  -ms-zoom: 0.25;
+  -moz-transform: scale(0.25);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(0.25);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.25);
+  -webkit-transform-origin: 0 0;
+} */
+
+/* Variables */
+
+:root {
+  --thumbnail-width: 1440px;
+  --thumbnail-height: 900px;
+  --thumbnail-zoom: 0.25;
+}
+/* Basic CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Demo-specific styling */
+body {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* This container helps the thumbnail behave as if it were an unscaled IMG element */
+.thumbnail-container {
+  width: calc(var(--thumbnail-width) * var(--thumbnail-zoom));
+  height: calc(var(--thumbnail-height) * var(--thumbnail-zoom));
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  background: #f9f9f9;
+}
+
+/* This is a masking container for the zoomed iframe element */
+.thumbnail {
+  -ms-zoom: var(--thumbnail-zoom);
+  -moz-transform: scale(var(--thumbnail-zoom));
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(var(--thumbnail-zoom));
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(var(--thumbnail-zoom));
+  -webkit-transform-origin: 0 0;
+}
+
+/* This is our screen sizing */
+.thumbnail,
+.thumbnail iframe {
+  width: var(--thumbnail-width);
+  height: var(--thumbnail-height);
+}
+
+/* This facilitates the fade-in transition instead of flicker. It also helps us maintain the illusion that this is an image, since some webpages will have a preloading animation or wait for some images to download */
+.thumbnail iframe {
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+/* This pseudo element masks the iframe, so that mouse wheel scrolling and clicking do not affect the simulated "screenshot" */
+.thumbnail:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
