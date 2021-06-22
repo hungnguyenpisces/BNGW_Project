@@ -45,13 +45,14 @@ body {
 
 /* Demo-specific styling */
 body {
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   margin: 50px 0;
   display: flex;
   flex-wrap: wrap;
   align-content: center;
   justify-content: space-evenly;
   padding: 0 25px;
+  background-image: radial-gradient(circle, #7C41CB, #4C1FDA, #E57986);
 }
 .preview {
   display: flex;
@@ -62,8 +63,8 @@ body {
 }
 
 .preview a {
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  color: black;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+  color: white;
   text-decoration: none;
   font-size: 20px;
   font-weight: 700;
@@ -90,7 +91,6 @@ body {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-
 
 /* This is a masking container for the zoomed iframe element */
 .thumbnail {
