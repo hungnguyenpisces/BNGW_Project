@@ -70,6 +70,7 @@ body {
   font-weight: 700;
 }
 .preview:hover {
+  z-index: 1;
   transform: scale(1.25);
   -webkit-transform: scale(1.25);
   -moz-transform: scale(1.25);
