@@ -57,7 +57,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 25px 0 50px;
+  transition-duration: 0.25s;
 }
+
 .preview a {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
   color: black;
@@ -65,15 +68,21 @@ body {
   font-size: 20px;
   font-weight: 700;
 }
-
+.preview:hover {
+  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+}
 /* This container helps the thumbnail behave as if it were an unscaled IMG element */
 .thumbnail-container {
+  margin-bottom: 20px;
   width: calc(var(--thumbnail-width) * var(--thumbnail-zoom));
   height: calc(var(--thumbnail-height) * var(--thumbnail-zoom));
   display: inline-block;
   overflow: hidden;
   background: #f9f9f9;
-  margin: 25px 0;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   -webkit-border-radius: 10px;
