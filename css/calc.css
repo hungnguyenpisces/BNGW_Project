@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #ffc107;
+}
+html {
+  margin: 50px 25px;
+}
+body {
+  /* padding: 100px; */
+  font-family: "Fira Sans";
+  font-size: 16px;
+  background-image: radial-gradient(circle, #7c41cb, #4c1fda, #e57986);
+}
+
+.session-calc {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.calc-switch {
+  min-width: 300px;
+}
+.calc-switch a {
+  height: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  background-color: #7c41cb;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #eeeeee;
+  text-decoration: none;
+  display: block;
+}
+.calc-active {
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+#bmi-calc {
+  display: none;
+}
+#ibw-calc {
+  display: none;
+}
+#dci-calc {
+  display: none;
+}
+#cb-calc {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .session-calc {
+    flex-flow: row wrap;
+  }
+  .calc-switch {
+    width: 100%;
+  }
+}
+
+/* style="color: #000000; background-color: #eeeeee; border: 1px solid #eeeeee;" */
