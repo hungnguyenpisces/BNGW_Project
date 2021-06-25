@@ -121,7 +121,7 @@
                 hiddenMenu.style.display = 'none';
             }
             window.addEventListener('mouseup', function (event) {
-                if (event.target != subMenu && event.target.parentNode != subMenu) {
+                if (event.target != subMenu && event.target != hiddenMenu) {
                     hiddenMenu.style.display = 'none';
                     return;
                 }
