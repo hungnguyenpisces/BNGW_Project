@@ -8,7 +8,8 @@ body {
   font-family: "Fira Sans";
   font-size: 1em;
   color: #ffffff;
-  background-image: radial-gradient(circle, #7c41cb, #4c1fda, #e57986);
+  /* background-color: #d9ef81; */
+  background-image: linear-gradient(to right, #c0eb6a, #b5d43c);
 }
 .container {
   max-width: 1234px;
@@ -16,7 +17,7 @@ body {
 }
 .header a {
   display: block;
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
   text-align: center;
   line-height: 50px;
@@ -59,6 +60,9 @@ body {
   transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
   transform-origin: center top;
 }
+#hidden-menu a {
+  color: #ffffff;
+}
 #search-form {
   z-index: 999;
   position: absolute;
@@ -82,10 +86,10 @@ body {
 #search-form .form-control {
   height: 100%;
   width: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     rgba(99, 106, 150, 0.4) 0%,
     rgba(182, 186, 214, 0.25) 100%
-  );
+  ); */
   outline: none;
   border: none;
   border-radius: 30px;
