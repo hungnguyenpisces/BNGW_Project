@@ -7,9 +7,9 @@ body {
   margin: 25px 0;
   font-family: "Fira Sans";
   font-size: 1em;
-  color: #ffffff;
+  /* color: #ffffff; */
   /* background-color: #d9ef81; */
-  background-image: linear-gradient(to right, #6CBE03, #F4A700);
+  background-image: linear-gradient(to right, #6cbe03, #f4a700);
 }
 .container {
   max-width: 1234px;
@@ -103,4 +103,8 @@ body {
   line-height: 130%;
   color: rgb(255, 255, 255);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+}
+#myModal {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px) saturate(100%);
 }
