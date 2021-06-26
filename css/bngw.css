@@ -42,7 +42,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: repeat(7, auto);
-  gap: 26px;
+  gap: 10px;
   list-style: none;
 }
 #hidden-menu {
@@ -70,7 +70,7 @@ body {
   width: 100%;
   min-width: 320px;
   margin-top: 10px;
-  gap: 16px;
+  gap: 10px;
   padding: 10px;
   right: 0px;
   background: rgba(15, 14, 71, 0.3);
