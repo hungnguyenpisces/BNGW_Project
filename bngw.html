@@ -30,7 +30,7 @@
                         <li><a href="#">Category #3</a></li>
                         <li><a href="#">Category #4</a></li>
                         <li>
-                            <a id="sub-menu" href="#"><i class="fas fa-ellipsis-h"></i></a>
+                            <a id="sub-menu" href="#"><i class="fas fa-ellipsis-h fa-lg"></i></a>
                             <ul id="hidden-menu" style="display: none;">
                                 <li><a href="##">Quick link 1</a></li>
                                 <li><a href="##">Quick link 2</a></li>
@@ -39,71 +39,13 @@
                             </ul>
                         </li>
                         <li>
-                            <a id="search-icon" href="#"><i class="fas fa-search"></i></a>
+                            <a id="search-icon" href="#"><i class="fas fa-search fa-lg"></i></a>
                             <div id="search-form" style="display: none;">
                                 <input type="text" name="search" placeholder="Search" id="" class="form-control" />
                             </div>
                         </li>
-                        <li><a href="#"><i class="fas fa-id-card-alt"></i></a></li>
+                        <li><a href="#"><i class="fas fa-address-card fa-lg"></i></a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="session-calc">
-                <div class="calc-switch">
-                    <div>
-                        <a id="calc-bmi" onclick="bmiCalc()" href="#">Body Mass Index (BMI)</a>
-                    </div>
-                    <div>
-                        <a id="calc-ibw" onclick="ibwCalc()" href="#">Ideal Body Weight</a>
-                    </div>
-                    <div>
-                        <a id="calc-dci" onclick="dciCalc()" href="#">Daily Calorie Intake</a>
-                    </div>
-                    <div>
-                        <a id="calc-cb" onclick="cbCalc()" href="#">Calories Burned</a>
-                    </div>
-                </div>
-                <div class="calc-active">
-                    <div id="bmi-calc">
-                        <div class="yz-widget" data-calculator-type="bmi" data-language="en" data-unit-system="metric"
-                            data-background-color="#EEEEEE" data-text-color="#212121" data-primary-color="#03A9F4"
-                            data-alternate-background-color="#FFFFFF" data-alternate-text-color="#FFFFFF"
-                            data-secondary-color="#FFC107">
-                            <span class="yz-copyright">Powered by
-                                <a href="https://www.yazio.com/en/bmi-calculator">YAZIO</a></span>
-                        </div>
-                        <script src="https://widget.yazio.com/calculator.js" async></script>
-                    </div>
-                    <div id="ibw-calc">
-                        <div class="yz-widget" data-calculator-type="ideal_weight" data-language="en"
-                            data-unit-system="metric" data-background-color="#EEEEEE" data-text-color="#212121"
-                            data-primary-color="#03A9F4" data-alternate-background-color="#FFFFFF"
-                            data-alternate-text-color="#FFFFFF" data-secondary-color="#FFC107">
-                            <span class="yz-copyright">Powered by
-                                <a href="https://www.yazio.com/en/ideal-weight-calculator">YAZIO</a></span>
-                        </div>
-                        <script src="https://widget.yazio.com/calculator.js" async></script>
-                    </div>
-                    <div id="dci-calc">
-                        <div class="yz-widget" data-calculator-type="daily_need" data-language="en"
-                            data-unit-system="metric" data-background-color="#EEEEEE" data-text-color="#212121"
-                            data-primary-color="#03A9F4" data-alternate-background-color="#FFFFFF"
-                            data-alternate-text-color="#FFFFFF" data-secondary-color="#FFC107">
-                            <span class="yz-copyright">Powered by
-                                <a href="https://www.yazio.com/en/calorie-intake-calculator">YAZIO</a></span>
-                        </div>
-                        <script src="https://widget.yazio.com/calculator.js" async></script>
-                    </div>
-                    <div id="cb-calc">
-                        <div class="yz-widget" data-calculator-type="calories_burned" data-language="en"
-                            data-unit-system="metric" data-background-color="#EEEEEE" data-text-color="#212121"
-                            data-primary-color="#03A9F4" data-alternate-background-color="#FFFFFF"
-                            data-alternate-text-color="#FFFFFF" data-secondary-color="#FFC107">
-                            <span class="yz-copyright">Powered by
-                                <a href="https://www.yazio.com/en/calories-burned-calculator">YAZIO</a></span>
-                        </div>
-                        <script src="https://widget.yazio.com/calculator.js" async></script>
-                    </div>
                 </div>
             </div>
         </div>
@@ -142,83 +84,7 @@
                 }
             });
         }
-        function bmiCalc() {
-    document.getElementById("bmi-calc").style.display = "block";
-    document.getElementById("ibw-calc").style.display = "none";
-    document.getElementById("dci-calc").style.display = "none";
-    document.getElementById("cb-calc").style.display = "none";
-
-    var calcBmi = document.getElementById("calc-bmi");
-    calcBmi.style.color = "#000000";
-    calcBmi.style.backgroundColor = "#eeeeee";
-    calcBmi.style.border = "1px solid #eeeeee";
-    calcBmi.style.fontWeight = 700;
-    var calcIbw = document.getElementById("calc-ibw");
-    calcIbw.style = "none";
-    var calcDci = document.getElementById("calc-dci");
-    calcDci.style = "none";
-    var calcCb = document.getElementById("calc-cb");
-    calcCb.style = "none";
-}
-
-function ibwCalc() {
-    document.getElementById("bmi-calc").style.display = "none";
-    document.getElementById("ibw-calc").style.display = "block";
-    document.getElementById("dci-calc").style.display = "none";
-    document.getElementById("cb-calc").style.display = "none";
-
-    var calcBmi = document.getElementById("calc-bmi");
-    calcBmi.style = "none";
-    var calcIbw = document.getElementById("calc-ibw");
-    calcIbw.style.color = "#000000";
-    calcIbw.style.backgroundColor = "#eeeeee";
-    calcIbw.style.border = "1px solid #eeeeee";
-    calcIbw.style.fontWeight = 700;
-    var calcDci = document.getElementById("calc-dci");
-    calcDci.style = "none";
-    var calcCb = document.getElementById("calc-cb");
-    calcCb.style = "none";
-}
-
-function dciCalc() {
-    document.getElementById("bmi-calc").style.display = "none";
-    document.getElementById("ibw-calc").style.display = "none";
-    document.getElementById("dci-calc").style.display = "block";
-    document.getElementById("cb-calc").style.display = "none";
-
-    var calcBmi = document.getElementById("calc-bmi");
-    calcBmi.style = "none";
-    var calcIbw = document.getElementById("calc-ibw");
-    calcIbw.style = "none";
-    var calcDci = document.getElementById("calc-dci");
-    calcDci.style.color = "#000000";
-    calcDci.style.backgroundColor = "#eeeeee";
-    calcDci.style.border = "1px solid #eeeeee";
-    calcDci.style.fontWeight = 700;
-    var calcCb = document.getElementById("calc-cb");
-    calcCb.style = "none";
-}
-function cbCalc() {
-    document.getElementById("bmi-calc").style.display = "none";
-    document.getElementById("ibw-calc").style.display = "none";
-    document.getElementById("dci-calc").style.display = "none";
-    document.getElementById("cb-calc").style.display = "block";
-
-    var calcBmi = document.getElementById("calc-bmi");
-    calcBmi.style = "none";
-    var calcIbw = document.getElementById("calc-ibw");
-    calcIbw.style = "none";
-    var calcDci = document.getElementById("calc-dci");
-    calcDci.style = "none";
-    var calcCb = document.getElementById("calc-cb");
-    calcCb.style.color = "#000000";
-    calcCb.style.backgroundColor = "#eeeeee";
-    calcCb.style.border = "1px solid #eeeeee";
-    calcCb.style.fontWeight = 700;
-}
-
     </script>
-    <!-- <script type="text/javascript" src="/js/calc.js"></script> -->
-</body>
+    </body>
 
 </html>
