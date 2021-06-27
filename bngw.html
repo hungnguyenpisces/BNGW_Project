@@ -28,6 +28,7 @@
                         LOGO
                     </a>
                 </div>
+                <!-- Đặt link vào navbar -->
                 <div class="menu">
                     <ul>
                         <li><a href="#"><i class="fab fa-pagelines fa-lg"></i> Healthy Life</a></li>
@@ -55,9 +56,10 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Hết khu vực đặt link navbar -->
             </div>
 
-            <!-- The Modal -->
+            <!-- The Modal Sign In / Sign Up-->
             <div class="modal fade" id="myModal">
                 <div class="modal-dialog modal-dialog-centered modal-lg" style="margin-top: -100px;">
                     <div class="modal-content" style="padding: 20px;">
@@ -94,38 +96,7 @@
     <div class="main"></div>
     <div class="footer"></div>
 
-    <script>
-        var subMenu = document.getElementById('sub-menu');
-        var hiddenMenu = document.getElementById('hidden-menu');
-        subMenu.onclick = function () {
-            if (hiddenMenu.style.display == 'none') {
-                hiddenMenu.style.display = 'grid';
-            } else {
-                hiddenMenu.style.display = 'none';
-            }
-            window.addEventListener('mouseup', function (event) {
-                if (event.target != subMenu && event.target != hiddenMenu) {
-                    hiddenMenu.style.display = 'none';
-                    return;
-                }
-            });
-        }
-        var searchIcon = document.getElementById('search-icon');
-        var searchForm = document.getElementById('search-form');
-        searchIcon.onclick = function () {
-            if (searchForm.style.display == 'none') {
-                searchForm.style.display = 'grid';
-            } else {
-                searchForm.style.display = 'none';
-            }
-            window.addEventListener('mouseup', function (event) {
-                if (event.target != searchIcon && event.target.parentNode != searchForm) {
-                    searchForm.style.display = 'none';
-                    return;
-                }
-            });
-        }
-    </script>
+    <script src="/js/bngw.js"></script>
 </body>
 
 </html>
