@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Assignment JS 2 VietLott</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/asJs2.css">
+</head>
+
+<body>
+
+    <div class="container mt-3">
+        <h1>NÀO MÌNH CÙNG CHƠI VIETLOTT</h1>
+        <br>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#mega">MEGA 6/45</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#power">POWER 6/55</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="mega" class="container tab-pane active"><br>
+                <h3>Hướng dẫn cách chơi MEGA 6/45</h3>
+                <p>Chọn 6 bộ số khác nhau có 2 chữ số (từ 01-45) bạn cho là sẽ trúng thưởng và nhấn "QUAY TAY" à nhầm
+                    "QUAY THƯỞNG" rồi thắp hương khấn tổ tiên, thần linh phù hộ nha!</p>
+                <div class="input-number">
+                    <input type="number" min="01" max="45" class="form-control" name="number" id="mega-number1">
+                    <input type="number" min="01" max="45" class="form-control" name="number" id="mega-number2">
+                    <input type="number" min="01" max="45" class="form-control" name="number" id="mega-number3">
+                    <input type="number" min="01" max="45" class="form-control" name="number" id="mega-number4">
+                    <input type="number" min="01" max="45" class="form-control" name="number" id="mega-number5">
+                    <input type="number" min="01" max="45" class="form-control" name="number" id="mega-number6">
+                </div>
+                <div id="mega-numbers">
+                </div>
+                <div class="xac-nhan">
+                    <button class="btn btn-primary" onclick="numInput()" type="submit">Xác Nhận</button>
+                </div>
+                <div id="mega-result">
+                    <span class="bg-success text-white" type="number" id="mega-result1"></span>
+                    <span class="bg-success text-white" type="number" id="mega-result2"></span>
+                    <span class="bg-success text-white" type="number" id="mega-result3"></span>
+                    <span class="bg-success text-white" type="number" id="mega-result4"></span>
+                    <span class="bg-success text-white" type="number" id="mega-result5"></span>
+                    <span class="bg-success text-white" type="number" id="mega-result6"></span>
+                </div>
+                <div class="xac-nhan">
+                    <button class="btn btn-success" onclick="quayMega()" type="submit">Quay Số</button>
+                </div>
+                <div>
+                    <p><b>CƠ CẤU GIẢI THƯỞNG</b></p>
+                    <h1 class="text-danger">GIẢI JACKPOT: TRÙNG 6 BỘ SỐ</h1>
+                    <h2 class="text-warning">GIẢI ĐẶC BIỆT: TRÙNG 5 BỘ SỐ</h2>
+                    <h3 class="text-primary">GIẢI NHẤT: TRÙNG 4 BỘ SỐ</h3>
+                    <h4 class="text-success">GIẢI KHÚC KHÍCH: TRÙNG 3 BỘ SỐ</h4>
+                    <p class="text-info">GIẢI CÒN CÁI NỊT</p>
+                </div>
+            </div>
+            <div id="power" class="container tab-pane fade"><br>
+                <h3>Hướng dẫn cách chơi POWER 6/55</h3>
+                <p>Chọn 6 bộ số khác nhau có 2 chữ số (từ 01-55) bạn cho là sẽ trúng thưởng và nhấn "QUAY TAY" à nhầm
+                    "QUAY THƯỞNG" rồi thắp hương khấn tổ tiên, thần linh phù hộ nha!</p>
+                <div class="input-number">
+                    <input type="number" min="01" max="55" class="form-control" name="number" id="power-number1">
+                    <input type="number" min="01" max="55" class="form-control" name="number" id="power-number2">
+                    <input type="number" min="01" max="55" class="form-control" name="number" id="power-number3">
+                    <input type="number" min="01" max="55" class="form-control" name="number" id="power-number4">
+                    <input type="number" min="01" max="55" class="form-control" name="number" id="power-number5">
+                    <input type="number" min="01" max="55" class="form-control" name="number" id="power-number6">
+                </div>
+                <div id="power-numbers">
+                </div>
+                <div class="xac-nhan">
+                    <button class="btn btn-primary" onclick="numInput()" type="submit">Xác Nhận</button>
+                </div>
+                <div id="power-result">
+                    <span class="bg-success text-white" id="power-result1"></span>
+                    <span class="bg-success text-white" id="power-result2"></span>
+                    <span class="bg-success text-white" id="power-result3"></span>
+                    <span class="bg-success text-white" id="power-result4"></span>
+                    <span class="bg-success text-white" id="power-result5"></span>
+                    <span class="bg-success text-white" id="power-result6"></span>
+                </div>
+                <div class="xac-nhan">
+                    <button class="btn btn-success" onclick="quayPower()" type="submit">Quay Số</button>
+                </div>
+                <div>
+                    <p><b>CƠ CẤU GIẢI THƯỞNG</b></p>
+                    <h1 class="text-danger">GIẢI JACKPOT: TRÙNG 6 BỘ SỐ</h1>
+                    <h2 class="text-warning">GIẢI ĐẶC BIỆT: TRÙNG 5 BỘ SỐ</h2>
+                    <h3 class="text-primary">GIẢI NHẤT: TRÙNG 4 BỘ SỐ</h3>
+                    <h4 class="text-success">GIẢI KHÚC KHÍCH: TRÙNG 3 BỘ SỐ</h4>
+                    <p class="text-info">GIẢI CÒN CÁI NỊT</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/asJs2.js"></script>
+</body>
+
+</html>

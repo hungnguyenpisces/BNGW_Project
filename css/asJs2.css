@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.input-number {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  gap: 20px;
+}
+
+.input-number input {
+  width: 75px;
+}
+#mega-numbers {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  gap: 20px;
+}
+#mega-numbers span {
+  margin-top: 20px;
+  width: 75px;
+  text-align: center;
+  font-weight: 700;
+}
+#power-numbers {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  gap: 20px;
+}
+#power-numbers span {
+  margin-top: 20px;
+  width: 75px;
+  text-align: center;
+  font-weight: 700;
+}
+.xac-nhan {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+#mega-result {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  gap: 20px;
+}
+#mega-result span {
+  margin-top: 20px;
+  width: 75px;
+  text-align: center;
+  font-weight: 700;
+}
+#power-result {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  gap: 20px;
+}
+#power-result span {
+  margin-top: 20px;
+  width: 75px;
+  text-align: center;
+  font-weight: 700;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event JS</title>
+</head>
+
+<body>
+    <!-- <h1 onmouseenter="demo2()">đưa chuột vào đây</h1> -->
+    <h1>Demo Event trong JS</h1>
+    <!-- mouse event : onmouseenter, onmouseleave, onmouseover, onmouseout, ondbclick   -->
+    <div>
+        <button type="submit" onclick="demo1()">nhấn để chạy js</button>
+    </div>
+    <div>
+        <button type="submit" ondblclick="demo3()">nhấn đúp để chạy js</button>
+    </div>
+
+    <input onkeyup="textInput(this)" type="text" name="demo" id="" placeholder="Enter any text..." />
+
+    <div>
+        <select name="city" id="" onchange="changeSelect(this)">
+            <option value="HN">Hanoi</option>
+            <option value="HCM">HCM</option>
+            <option value="DN">Danang</option>
+        </select>
+    </div>
+
+
+    <div>
+        <input onkeypress="timer(this)" type="number" name="timer" id="" placeholder="nhập số phút">
+    </div>
+    <div>
+        <h2>
+            <span id="phut">00</span>
+            <span>:</span>
+            <span id="giay">00</span>
+        </h2>
+    </div>
+    <div>
+        <p>món quà ngẫu nhiên bạn nhận đc là:</p>
+        <h2 id="monqua"></h2>
+        <button onclick="nhanqua()" type="submit">click để quay quà ngẫu nhiên</button>
+    </div>
+    <script src="/js/event.js"></script>
+</body>
+
+</html>
