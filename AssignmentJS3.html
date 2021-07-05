@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment JS3</title>
+        <link rel="stylesheet" href="/css/asjs3.css" />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- <div class="col-md-12"> -->
+                <div class="header">
+                    <h1>Assignment JS3 load more from api</h1>
+                </div>
+            <!-- </div> -->
+        </div>
+        <div class="container" id="container">
+            <!-- <div class="row col-md-12" id="row"> -->
+                <div id="load-more">
+                    <button class="btn btn-primary" type="button" onclick="loadMore()">Load more</button>
+                </div>
+
+            <!-- </div> -->
+            <!-- <div class="col-md-3">
+                <div class="product">
+                    <img src="/images/shop.jpg" alt="">
+                    <h2>products name</h2>
+                    <p>product desc</p>
+                    <h2>$ price</h2>
+                    <a href="#" class="pr-details">product details</a>
+                </div>
+            </div> -->
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            function loadMore() {
+                var p = [];
+                $.ajax({
+                    url: "https://foodgroup.herokuapp.com/api/category/1",
+                    method: "GET",
+                    success: function (rs) {
+                        p = rs.data.foods;
+                        var container = $("#container");
+                        for (var i = 0; i < p.length; i++) {
+                            var ct = "<div class=\"col-md-3\">\n" +
+                                "<div class=\"product\">\n" +
+                                "            <img src=\"" + p[i].image + "\"/>\n" +
+                                "            <h2>" + p[i].name + "</h2>\n" +
+                                "            <p>" + p[i].description + "</p>\n" +
+                                "            <h3>" + "$" + p[i].price + "</h3>\n" +
+                                "<a href=\"#\" class=\"pr-details\">product details</a>\n" +
+                                "        </div>" +
+                                "        </div>";
+                            container.prepend(ct);
+                        }
+                    }
+
+                });
+
+            }
+        </script>
+    </body>
+
+</html>

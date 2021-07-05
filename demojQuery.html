@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Demo jQuery</title>
+    </head>
+
+    <body>
+        <h1 id="title">chỗ này là tiêu đề</h1>
+        <button type="button" onclick="hidePg()">Hide</button>
+        <button type="button" onclick="showPg()">Show</button>
+        <button type="button" onclick="onOff()">ON-OFF</button>
+        <p class="pg">
+            djfhaslkdjfhalskdjfalksjdhflakshdfoiurblastyvbastybalsdfhvbslkdjfhbslkdjfhalflsjsldkjhlablhgjskaooeihtwpeiortyu2938uf2n-30iutg-23n453645y63rt5ye6r5tgy4e6r564tg465yhg546yhg4566hu56ui64rtu65rtuh6sef5g4hse6r4h965fg1h96f5g1h96serf41h96e85rt1h9rth1e96f5g1he96t8y1he9t5yhj1e6t5yj1he9t8yhj41e9t8yj19et8y41he9rt5yh1e9r5t8h41
+        </p>
+        <p class="pg">
+            djfhaslkdjfhalskdjfalksjdhflakshdfoiurblastyvbastybalsdfhvbslkdjfhbslkdjfhalflsjsldkjhlablhgjskaooeihtwpeiortyu2938uf2n-30iutg-23n453645y63rt5ye6r5tgy4e6r564tg465yhg546yhg4566hu56ui64rtu65rtuh6sef5g4hse6r4h965fg1h96f5g1h96serf41h96e85rt1h9rth1e96f5g1he96t8y1he9t5yhj1e6t5yj1he9t8yhj41e9t8yj19et8y41he9rt5yh1e9r5t8h41
+        </p>
+        <p class="pg">
+            djfhaslkdjfhalskdjfalksjdhflakshdfoiurblastyvbastybalsdfhvbslkdjfhbslkdjfhalflsjsldkjhlablhgjskaooeihtwpeiortyu2938uf2n-30iutg-23n453645y63rt5ye6r5tgy4e6r564tg465yhg546yhg4566hu56ui64rtu65rtuh6sef5g4hse6r4h965fg1h96f5g1h96serf41h96e85rt1h9rth1e96f5g1he96t8y1he9t5yhj1e6t5yj1he9t8yhj41e9t8yj19et8y41he9rt5yh1e9r5t8h41
+        </p>
+        <button type="button" onclick="loadMore()">Load more</button>
+        <div class="row" id="row">
+            
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            var t = $("#title");
+            t.css({
+                "color": "red",
+                "font-size": "30px",
+            });
+            var ps = $(".pg");
+            ps.css({
+                "color": "green",
+            });
+            ps.text("viết cái gì đó trong này rõ dàng hơn");
+
+            function hidePg() {
+                // ps.hide();
+                // ps.fadeOut(250);
+                ps.slideUp()
+            }
+            function showPg() {
+                // ps.show();
+                // ps.fadeIn(250);
+                ps.slideDown()
+            }
+            function onOff() {
+                // ps.toggle();
+                ps.fadeToggle();
+                // ps.slideToggle();
+            }
+            function loadMore() {
+                var p = [];// ti nua se lay tu
+                $.ajax({ //
+                    url: "data/products.json",
+                    method: "GET",
+                    success: function (rs) { // callback
+                        p = rs;
+                        var row = $("#row");
+                        for (var i = 0; i < p.length; i++) {
+                            var ct =  "<div class=\"item\">\n" +
+                                "            <img src=\"" + p[i].image + "\"/>\n" +
+                                "            <h2>" + p[i].name + "</h2>\n" +
+                                "        </div>"; // ct chi la 1 string thoi
+                            row.append(ct); // row.html(row.html() +ct)
+                            // row.prepend(ct) // row.html(ct+row.html());
+                        }
+                    }
+
+                });
+
+            }
+        </script>
+    </body>
+
+</html>
