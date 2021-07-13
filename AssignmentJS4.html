@@ -1,20 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <title>Assignment JS4</title>
+    <title>Assignment JS4 Weather API</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <style>
+      .container {
+        height: 1000px;
+        background-color: #ccc;
+      }
+
+      #header {
+        display: flex;
+        align-items: center;
+      }
+    </style>
   </head>
+
   <body>
-      
+    <div class="container">
+      <div id="header" class="row">
+        <div class="row col-xl-6">
+          <div class="col-xl-3">
+            <div id="icon"></div>
+          </div>
+          <div class="col-xl-4" style="display: flex; align-items: center">
+            <h1><span id="temp"></span><sup>o</sup>C</h1>
+          </div>
+          <div class="col-xl-5" style="display: flex;flex-direction: column;justify-content: center;color: rgb(90, 90, 90);">
+            <h3>Độ ẩm: <span id="hum">62</span>%</h3>
+            <h3>Gió: <span id="wind">13</span>km/h</h3>
+          </div>
+        </div>
+        <div class="col-xl-6 text-right">
+          <h1><span id="city"></span></h1>
+          <h3><span id="desc" style="text-transform: capitalize;color: rgb(90, 90, 90);"></span></h3>
+        </div>
+      </div>
+      <div id="footer">
+
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $.ajax({
+        url: "http://pro.openweathermap.org/data/2.5/weather",
+        method: "GET", // GET hay POST do API quyet dinh
+        data: {
+          q: "hanoi,vn",
+          units: "metric",
+          appid: "0adea5b26a67c201416013b5200c5bca",
+          lang: "vi",
+        }, //noi truyen tham so
+        success: function (rs) {
+          var weatherIcon = rs.weather[0].icon;
+          $("#icon").html(
+            `<img src="http://openweathermap.org/img/wn/${weatherIcon}@2x.png">`
+          );
+          $("#temp").text(rs.main.temp);
+          $("#hum").text(rs.main.humidity);
+          $("#wind").text(rs.wind.speed);
+          $("#city").text(rs.name + "," + rs.sys.country);
+          $("#desc").text(rs.weather[0].description);
+        },
+      });
+    </script>
   </body>
+
 </html>
