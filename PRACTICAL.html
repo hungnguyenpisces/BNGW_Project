@@ -7,43 +7,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/practical.css">
-
         <style>
-            .header-border {
-                width: 100%;
-                margin-bottom: 10px;
-                border-left: red solid 1px;
-                border-right: red solid 1px;
-                border-bottom: red solid 1px;
-
-                .heading,
-                .heading-subtitle {
-                    text-align: center;
-                }
-
-                .heading>span,
-                .heading-subtitle>span {
-                    background-color: white;
-                    box-shadow: white 11px 0px 0px,
-                        white -13px 0px 0px;
-
-                    &:after {
-                        content: '';
-                        border-top: 1px solid red;
-                        height: 1px;
-                        width: 100%;
-                        display: block;
-                        position: relative;
-                        top: -20px;
-                        z-index: -1;
-                    }
-                }
-
-                .heading-subtitle>span {
-                    &:after {
-                        top: -13px;
-                    }
-                }
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
             }
         </style>
     </head>
@@ -160,7 +128,9 @@
         <br><br><br>
         <div class="container">
             <div class="row">
-                <h4><b>Survey Question:</b></h4>
+                <div class="col">
+                    <h4><b>Survey Question:</b></h4>
+                </div>
             </div>
         </div>
         <br><br>
@@ -312,10 +282,10 @@
                             </form>
                         </div>
                     </div><br>
-                    
+
                     <br>
                     <br>
-                    
+
                     <div class="row">
                         <di class="col col-md-6">
                             <button type="submit" class="btn btn-success form-control">Continue</button>
