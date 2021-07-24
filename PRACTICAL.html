@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>BNGW PRACTICAL</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/practical.css">
+
+        <style>
+            .header-border {
+                width: 100%;
+                margin-bottom: 10px;
+                border-left: red solid 1px;
+                border-right: red solid 1px;
+                border-bottom: red solid 1px;
+
+                .heading,
+                .heading-subtitle {
+                    text-align: center;
+                }
+
+                .heading>span,
+                .heading-subtitle>span {
+                    background-color: white;
+                    box-shadow: white 11px 0px 0px,
+                        white -13px 0px 0px;
+
+                    &:after {
+                        content: '';
+                        border-top: 1px solid red;
+                        height: 1px;
+                        width: 100%;
+                        display: block;
+                        position: relative;
+                        top: -20px;
+                        z-index: -1;
+                    }
+                }
+
+                .heading-subtitle>span {
+                    &:after {
+                        top: -13px;
+                    }
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+
+        <div class="container">
+            <div class="row">
+                <h1>MATRIMONIAL SURVEY</h1>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4><b>Personal Details:</b>
+                    </h4>
+                </div>
+            </div>
+            <form>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <p>Name:</p>
+                            <input type="text" class="form-control" placeholder="Name" name="name" required>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Address:</p>
+                            <input type="text" class="form-control" placeholder="Address" name="address" required>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Phone:</p>
+                            <input type="number" class="form-control" placeholder="Phone" name="phone" required>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Email:</p>
+                            <input type="email" class="form-control" placeholder="Email" name="email" required>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Gender:</p>
+                            <form>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio">Male</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Female</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Age:</p>
+                            <input type="number" class="form-control" placeholder="Age" name="Age" required>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Qualification</p>
+                            <form>
+                                <div class="row">
+                                    <div class="col col-md-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck"
+                                                name="example1">
+                                            <label class="custom-control-label" for="customCheck">BCA</label>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck"
+                                                name="example1">
+                                            <label class="custom-control-label" for="customCheck">BA</label>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-4">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck"
+                                                name="example1">
+                                            <label class="custom-control-label" for="customCheck">BSC</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <di class="col col-md-6">
+                            <button type="submit" class="btn btn-success form-control">Continue</button>
+                        </di>
+                        <div class="col col-md-6">
+                            <button type="submit" class="btn btn-success form-control">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br><br><br>
+        <div class="container">
+            <div class="row">
+                <h4><b>Survey Question:</b></h4>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <p>How often you are surfing this site?</p>
+                            <form>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio">Daily</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Weekly</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Monthly</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Which matrimonial site you visit mostly?</p>
+                            <input type="text" class="form-control" placeholder="" name="test" required>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Where you use internet?</p>
+                            <form>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio">Home</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Office</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Cyber Cafe</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Are you feel sevices provided by us?</p>
+                            <form>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio">Fair</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Good</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Very good</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Excellent</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Which type of member you are?</p>
+                            <form>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio">Free</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Premium</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">Gold</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>If you are free member, would like to take paid service?</p>
+                            <form>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio">Yes</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">No</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">I 'll think</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Rate this website.</p>
+                            <form>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio">Below 5</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">5 to 10</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="example"
+                                        value="customEx">
+                                    <label class="custom-control-label" for="customRadio2">More than 10</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div><br>
+                    
+                    <br>
+                    <br>
+                    
+                    <div class="row">
+                        <di class="col col-md-6">
+                            <button type="submit" class="btn btn-success form-control">Continue</button>
+                        </di>
+                        <div class="col col-md-6">
+                            <button type="submit" class="btn btn-success form-control">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
