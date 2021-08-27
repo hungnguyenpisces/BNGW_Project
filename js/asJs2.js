@@ -45,69 +45,63 @@ function resultMega() {
 	}
 }
 
-function quayMega() {
-	var sec = 150;
-	var timer1 = setInterval(function () {
+
+
+
+
+function promise(i) {
+	var sec = 100;
+	setInterval(function () {
 		sec--;
-		var random = Math.random() * 45;
-		random = parseInt(random);
-		var mega = document.getElementById("mega-result1");
-		mega.innerText = random;
 		if (sec <= 0) {
-			clearInterval(timer1);
+			return;
 		}
-	}, 100);
-	var timer2 = setInterval(function () {
-		sec--;
-		var random = Math.random() * 45;
-		random = parseInt(random);
-		var mega = document.getElementById("mega-result2");
-		mega.innerText = random;
-		if (sec <= 0) {
-			clearInterval(timer2);
-		}
-	}, 100);
-	var timer3 = setInterval(function () {
-		sec--;
-		var random = Math.random() * 45;
-		random = parseInt(random);
-		var mega = document.getElementById("mega-result3");
-		mega.innerText = random;
-		if (sec <= 0) {
-			clearInterval(timer3);
-		}
-	}, 100);
-	var timer4 = setInterval(function () {
-		sec--;
-		var random = Math.random() * 45;
-		random = parseInt(random);
-		var mega = document.getElementById("mega-result4");
-		mega.innerText = random;
-		if (sec <= 0) {
-			clearInterval(timer4);
-		}
-	}, 100);
-	var timer5 = setInterval(function () {
-		sec--;
-		var random = Math.random() * 45;
-		random = parseInt(random);
-		var mega = document.getElementById("mega-result5");
-		mega.innerText = random;
-		if (sec <= 0) {
-			clearInterval(timer5);
-		}
-	}, 100);
-	var timer6 = setInterval(function () {
-		sec--;
-		var random = Math.random() * 45;
-		random = parseInt(random);
-		var mega = document.getElementById("mega-result6");
-		mega.innerText = random;
-		if (sec <= 0) {
-			clearInterval(timer6);
-		}
-	}, 100);
+		document.getElementById(`mega-result${i}`).innerText = parseInt(
+			Math.random() * 45 + 1
+		);
+	}, 10);
+	return new Promise(function (resolve, reject) {
+		setTimeout(resolve, 1000);
+	});
 }
+
+function quayMega() {
+	document.getElementById("mega-result").innerHTML = "";
+	document.getElementById("mega-result").innerHTML = 
+	`
+	<span class="bg-success text-white" type="number" id="mega-result1"></span>
+	<span class="bg-success text-white" type="number" id="mega-result2"></span>
+	<span class="bg-success text-white" type="number" id="mega-result3"></span>
+	<span class="bg-success text-white" type="number" id="mega-result4"></span>
+	<span class="bg-success text-white" type="number" id="mega-result5"></span>
+	<span class="bg-success text-white" type="number" id="mega-result6"></span>
+	`;
+	promise(1)
+		.then(function (data) {
+			return promise(2);
+		})
+		.then(function (data) {
+			return promise(3);
+		})
+		.then(function (data) {
+			return promise(4);
+		})
+		.then(function (data) {
+			return promise(5);
+		})
+		.then(function (data) {
+			return promise(6);
+		})
+		.finally(function () {
+			console.log("Done");
+		});
+}
+
+
+
+
+
+
 
 function quayPower() {
 	var sec = 150;
